@@ -1,0 +1,143 @@
+.checkout-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1rem 1.5rem 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fefefe;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  animation: slideInFade 0.8s ease forwards;
+  opacity: 0;
+}
+
+.checkout-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 900;
+  color: #222;
+  letter-spacing: 1.2px;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #888;
+  margin-top: 3rem;
+}
+
+.checkout-content {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.order-summary {
+  flex: 1 1 380px;
+  background: #fff;
+  padding: 1.8rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.order-summary h2 {
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 2px solid #ff6a00;
+  padding-bottom: 0.3rem;
+  letter-spacing: 0.8px;
+}
+
+.summary-items {
+  max-height: 320px;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+  padding-right: 10px;
+}
+
+.total-price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ff6a00;
+  text-align: right;
+}
+
+.checkout-form {
+  flex: 1 1 380px;
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.checkout-form h2 {
+  font-weight: 700;
+  color: #333;
+  border-bottom: 2px solid #ee0979;
+  padding-bottom: 0.3rem;
+  letter-spacing: 0.8px;
+  margin-bottom: 1rem;
+}
+
+.checkout-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  margin-top: 0.3rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  outline: none;
+  border-color: #ee0979;
+  box-shadow: 0 0 8px rgba(238, 9, 121, 0.4);
+}
+
+.place-order-btn {
+  margin-top: 1rem;
+  background: linear-gradient(45deg, #ee0979, #ff6a00);
+  border: none;
+  padding: 0.9rem 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: white;
+  border-radius: 35px;
+  cursor: pointer;
+  box-shadow: 0 7px 20px rgba(238, 9, 121, 0.6);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.place-order-btn:hover {
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
+  box-shadow: 0 10px 25px rgba(255, 106, 0, 0.8);
+}
+
+@keyframes slideInFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}

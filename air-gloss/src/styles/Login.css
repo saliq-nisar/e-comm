@@ -1,0 +1,119 @@
+/* Global reset for height and font */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Full screen center container */
+.login-page {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* ensure no extra spacing */
+}
+
+/* Card-style form wrapper */
+.login-wrapper {
+    will-change: transform, opacity;
+  background: #fff;
+  padding: 3rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(238, 9, 121, 0.4);
+  width: 100%;
+  max-width: 420px;
+  animation: fadeInScale 0.8s ease forwards;
+}
+
+/* Form layout */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-title {
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #ee0979;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Labels */
+.input-label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Inputs */
+.input-field {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #ee0979;
+  box-shadow: 0 0 8px rgba(238, 9, 121, 0.4);
+}
+
+/* Submit button */
+.login-button {
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
+  border: none;
+  padding: 0.85rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 700;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 6px 20px rgba(238, 9, 121, 0.4);
+}
+
+.login-button:hover {
+  background: linear-gradient(45deg, #ee0979, #ff6a00);
+  box-shadow: 0 10px 30px rgba(255, 106, 0, 0.7);
+}
+
+/* Error message */
+.error-msg {
+  color: #e63946;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Entry animation */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .login-wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .login-title {
+    font-size: 1.8rem;
+  }
+}
